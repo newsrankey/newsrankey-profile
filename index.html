@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; word-break: keep-all; }
-        /* 네비게이션 클릭 시 섹션이 헤더에 가려지지 않도록 상단 여백 설정 */
         section { scroll-margin-top: 80px; }
         .hero-gradient {
             background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
@@ -27,6 +26,8 @@
         #mobile-menu.active {
             display: block;
         }
+        .logo-main { height: 40px; width: auto; object-fit: contain; }
+        .logo-card { height: 35px; width: auto; object-fit: contain; margin-bottom: 1rem; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden text-left">
@@ -35,10 +36,12 @@
     <nav class="fixed top-0 w-full z-[1000] bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-black text-blue-800 tracking-tighter uppercase">NEWSRANKEY</a>
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#">
+                        <img src="https://newsrankey.com/img/toplogo220419.png" alt="NEWSRANKEY" class="logo-main">
+                    </a>
                 </div>
-                <!-- Desktop 메뉴 연동 -->
+                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8 font-bold text-slate-600 text-sm">
                     <a href="#about" class="hover:text-blue-700 transition">홍보의 고민</a>
                     <a href="#background" class="hover:text-blue-700 transition">탄생배경</a>
@@ -53,8 +56,9 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="md:hidden bg-white border-t border-slate-100">
-            <div class="px-4 py-6 space-y-2 text-left">
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-slate-100 shadow-xl">
+            <div class="px-4 py-6 space-y-2">
                 <a href="#about" class="mobile-link block py-3 px-4 text-lg font-bold text-slate-700 hover:bg-blue-50 rounded-xl">홍보의 고민</a>
                 <a href="#background" class="mobile-link block py-3 px-4 text-lg font-bold text-slate-700 hover:bg-blue-50 rounded-xl">탄생배경</a>
                 <a href="#business" class="mobile-link block py-3 px-4 text-lg font-bold text-slate-700 hover:bg-blue-50 rounded-xl">해결책(사업)</a>
@@ -67,7 +71,7 @@
     <!-- Hero Section -->
     <header class="hero-gradient pt-48 pb-32 px-4 text-center text-white">
         <div class="max-w-4xl mx-auto">
-            <div class="inline-block px-4 py-1.5 mb-6 border border-blue-400/30 rounded-full bg-blue-500/10 text-blue-300 text-sm font-bold">
+            <div class="inline-block px-4 py-1.5 mb-6 border border-blue-400/30 rounded-full bg-blue-500/10 text-blue-300 text-sm font-bold animate-pulse">
                 실적을 고민하는 홍보담당자님께 드리는 제안
             </div>
             <h1 class="text-4xl md:text-6xl font-black mb-8 leading-[1.2]">
@@ -87,23 +91,23 @@
     <section id="about" class="py-24 px-4 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-center">"광고는 넘기지만, 뉴스는 검색합니다"</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight">"광고는 넘기지만, 뉴스는 검색합니다"</h2>
                 <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-                <p class="mt-6 text-slate-500 max-w-2xl mx-auto text-lg text-center text-center">기업의 목소리가 고객의 신뢰를 얻는 유일한 방법은 제대로 된 보도뿐입니다.</p>
+                <p class="mt-6 text-slate-500 max-w-2xl mx-auto text-lg">기업의 목소리가 고객의 신뢰를 얻는 유일한 방법은 제대로 된 보도뿐입니다.</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="p-10 bg-slate-50 rounded-[2.5rem] card-hover border border-slate-100">
-                    <h3 class="text-xl font-bold mb-4 text-blue-700 text-left">보이지 않는 기사는<br>쓰지 않은 것과 같습니다</h3>
-                    <p class="text-slate-600 leading-relaxed text-left text-sm lg:text-base">아무리 훌륭한 소식도 포털 검색 결과에 나오지 않으면 무의미합니다. 확실한 디지털 발자국이 필요합니다.</p>
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">보이지 않는 기사는<br>쓰지 않은 것과 같습니다</h3>
+                    <p class="text-slate-600 leading-relaxed">아무리 훌륭한 소식도 포털 검색 결과에 나오지 않으면 무의미합니다. 확실한 디지털 발자국이 필요합니다.</p>
                 </div>
                 <div class="p-10 bg-slate-50 rounded-[2.5rem] card-hover border border-slate-100">
-                    <h3 class="text-xl font-bold mb-4 text-blue-700 text-left">고객은 광고보다<br>언론의 평가를 믿습니다</h3>
-                    <p class="text-slate-600 leading-relaxed text-left text-sm lg:text-base">언론이 보증하는 신뢰는 브랜드의 격을 바꿉니다. 제3자의 시각으로 가치를 증명해야 합니다.</p>
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">고객은 광고보다<br>언론의 평가를 믿습니다</h3>
+                    <p class="text-slate-600 leading-relaxed">언론이 보증하는 신뢰는 브랜드의 격을 바꿉니다. 제3자의 시각으로 가치를 증명해야 합니다.</p>
                 </div>
                 <div class="p-10 bg-slate-50 rounded-[2.5rem] card-hover border border-slate-100">
-                    <h3 class="text-xl font-bold mb-4 text-blue-700 text-left">위기의 순간,<br>기업을 지켜주는 방패</h3>
-                    <p class="text-slate-600 leading-relaxed text-left text-sm lg:text-base">신속한 팩트 보도는 악의적 여론으로부터 기업을 보호하는 가장 강력한 수단입니다.</p>
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">위기의 순간,<br>기업을 지켜주는 방패</h3>
+                    <p class="text-slate-600 leading-relaxed">신속한 팩트 보도는 악의적 여론으로부터 기업을 보호하는 가장 강력한 수단입니다.</p>
                 </div>
             </div>
         </div>
@@ -111,11 +115,12 @@
 
     <!-- Section 2: 탄생배경 (#background) -->
     <section id="background" class="py-24 px-4 bg-slate-900 text-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto relative z-10">
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl text-left"></div>
+        <div class="max-w-7xl mx-auto relative z-10 text-left">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="text-left">
-                    <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">대형 포털의 차별,<br><span class="text-blue-500 text-left">언제까지 지켜만 보시겠습니까?</span></h2>
-                    <div class="space-y-6 text-slate-400 text-lg leading-relaxed text-left">
+                    <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">대형 포털의 차별,<br><span class="text-blue-500">언제까지 지켜만 보시겠습니까?</span></h2>
+                    <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
                         <p>특정 매체 중심의 제휴 정책이 초래한 뉴스 공급의 불평등... <br>NEWSRANKEY는 우수한 기획력을 가진 언론사가 차별 없이 노출되는 대안적 뉴스 생태계를 구축하기 위해 탄생했습니다.</p>
                     </div>
                 </div>
@@ -123,11 +128,11 @@
                     <div class="grid grid-cols-2 gap-8 text-center">
                         <div>
                             <div class="text-4xl md:text-5xl font-black text-blue-500 mb-2">1,500+</div>
-                            <p class="text-slate-400 text-sm">연합 제휴 매체</p>
+                            <p class="text-slate-400 text-sm font-medium uppercase tracking-wider">연합 제휴 매체</p>
                         </div>
                         <div>
                             <div class="text-4xl md:text-5xl font-black text-blue-500 mb-2">36k+</div>
-                            <p class="text-slate-400 text-sm">기업 정보 DB</p>
+                            <p class="text-slate-400 text-sm font-medium uppercase tracking-wider">기업 정보 DB</p>
                         </div>
                     </div>
                 </div>
@@ -138,16 +143,16 @@
     <!-- Section 3: 주요사업 (#business) -->
     <section id="business" class="py-24 px-4 bg-slate-50">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-center">홍보 실적을 견인하는 4가지 솔루션</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight">홍보 실적을 견인하는 4가지 솔루션</h2>
                 <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-                <!-- 1. NEWSRANKEY (연한 파랑) - 홈페이지 연동 -->
-                <a href="https://newsrankey.com" target="_blank" class="block bg-blue-50 p-8 rounded-[2rem] border border-blue-100 card-hover flex flex-col group h-full transition-transform">
-                    <h3 class="text-xl font-black text-blue-800 mb-2 italic uppercase">NEWSRANKEY</h3>
-                    <p class="text-[10px] text-blue-600 font-bold mb-6 group-hover:underline">공식 홈페이지 &rarr;</p>
+                <!-- 1. NEWSRANKEY (연한 파랑) -->
+                <a href="https://newsrankey.com" target="_blank" class="block bg-blue-50 p-8 rounded-[2rem] border border-blue-100 card-hover flex flex-col group h-full">
+                    <img src="https://newsrankey.com/img/toplogo220419.png" alt="NEWSRANKEY" class="logo-card">
+                    <p class="text-[10px] text-blue-600 font-bold mb-4 group-hover:underline">뉴스전문포털 바로가기 &rarr;</p>
                     <p class="text-slate-700 text-sm mb-6 leading-relaxed font-medium">검색 주도권을 확보하는 실시간 뉴스 큐레이션 포털입니다.</p>
                     <ul class="text-xs text-slate-500 space-y-2 mt-auto">
                         <li>• 실시간 뉴스 엔진 연동</li>
@@ -155,12 +160,12 @@
                     </ul>
                 </a>
 
-                <!-- 2. 기업뉴스TV (연한 회색) - 홈페이지 연동 -->
-                <a href="https://kiupnewstv.com" target="_blank" class="block bg-slate-200/60 p-8 rounded-[2rem] border border-slate-200 card-hover flex flex-col group h-full transition-transform">
-                    <h3 class="text-xl font-black text-slate-800 mb-2 italic">기업뉴스TV</h3>
-                    <p class="text-[10px] text-red-600 font-bold mb-6 group-hover:underline">공식 홈페이지 &rarr;</p>
-                    <p class="text-slate-700 text-sm mb-6 leading-relaxed font-medium">현장 취재를 기반으로 숏폼/롱폼 영상을 보도하는 전문 채널입니다.</p>
-                    <ul class="text-xs text-slate-500 space-y-2 mt-auto">
+                <!-- 2. 기업뉴스TV (어두운 배경 적용) -->
+                <a href="https://kiupnewstv.com" target="_blank" class="block bg-slate-800 p-8 rounded-[2rem] border border-slate-700 card-hover flex flex-col group h-full">
+                    <img src="https://kiupnewstv.com/img/toplogokiupnewstv.png" alt="기업뉴스TV" class="logo-card">
+                    <p class="text-[10px] text-blue-400 font-bold mb-4 group-hover:underline">영상보도매체 바로가기 &rarr;</p>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed font-medium">현장 취재를 기반으로 숏폼/롱폼 영상을 보도하는 전문 채널입니다.</p>
+                    <ul class="text-xs text-slate-400 space-y-2 mt-auto">
                         <li>• 네이버TV/유튜브 상단 노출</li>
                         <li>• 고퀄리티 현장 밀착 취재</li>
                     </ul>
@@ -168,8 +173,8 @@
 
                 <!-- 3. 미디어협회 (연한 파랑) -->
                 <div class="bg-blue-50 p-8 rounded-[2rem] border border-blue-100 card-hover flex flex-col h-full">
-                    <h3 class="text-xl font-black text-blue-800 mb-8 italic text-left">미디어협회</h3>
-                    <p class="text-slate-700 text-sm mb-6 leading-relaxed font-medium text-left">1,500여 개 제휴사가 함께 공동 보도를 추진하는 강력한 네트워크입니다.</p>
+                    <h3 class="text-xl font-black text-blue-800 mb-8 italic">전국언론미디어협회</h3>
+                    <p class="text-slate-700 text-sm mb-6 leading-relaxed font-medium">1,500여 개 제휴사가 함께 공동 보도를 추진하는 강력한 네트워크입니다.</p>
                     <ul class="text-xs text-slate-500 space-y-2 mt-auto">
                         <li>• 릴레이 공동 보도 시스템</li>
                         <li>• 언론 권익 보호 및 상생</li>
@@ -178,41 +183,40 @@
 
                 <!-- 4. 랭키엠 (연한 회색) -->
                 <div class="bg-slate-200/60 p-8 rounded-[2rem] border border-slate-200 card-hover flex flex-col h-full">
-                    <h3 class="text-xl font-black text-slate-800 mb-8 italic text-left">랭키엠 (Ranky M)</h3>
-                    <p class="text-slate-700 text-sm mb-6 leading-relaxed font-medium text-left">기사의 신뢰도를 커머스로 연결하여 기업의 판로 개척을 돕습니다.</p>
-                    <ul class="text-xs text-slate-500 space-y-2 mt-auto">
+                    <h3 class="text-xl font-black text-slate-800 mb-8 italic">랭키엠 (Ranky M)</h3>
+                    <p class="text-slate-700 text-sm mb-6 leading-relaxed font-medium">기사의 신뢰도를 커머스로 연결하여 기업의 판로 개척을 돕습니다.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mt-auto text-left">
                         <li>• 미디어 커머스 융합 모델</li>
-                        <li>• 기업 전용 폐쇄몰/공동구매</li>
+                        <li>• 기업 전용 판로 개척 지원</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: 강점 (#advantage) - 영상 사례 연동 -->
+    <!-- Section 4: 강점 (#advantage) -->
     <section id="advantage" class="py-24 px-4 bg-white border-b border-slate-100">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row gap-16 items-center text-left text-left">
+            <div class="flex flex-col lg:flex-row gap-16 items-center text-left">
                 <div class="lg:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 italic text-blue-800 text-left">"복사 붙여넣기 뉴스는 이제 그만"</h2>
-                    <h3 class="text-2xl font-bold mb-8 leading-snug text-slate-700 text-left">현장의 가치를 발굴하는 <span class="text-blue-600 font-black">진짜 심층 보도</span>의 힘</h3>
-                    <div class="space-y-6 mt-8 text-left text-left">
-                        <p class="text-slate-600 leading-relaxed text-left">1,500개 매체가 동시에 보도하는 '릴레이 보도'는 여론의 물줄기를 바꿉니다. 기업뉴스TV는 소식만 전하는 타 매체와 달리 현장 취재를 통해 깊이 있는 스토리를 담아냅니다.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 italic text-blue-800">"복사 붙여넣기 뉴스는 이제 그만"</h2>
+                    <h3 class="text-2xl font-bold mb-8 leading-snug text-slate-700">현장의 가치를 발굴하는 <span class="text-blue-600 font-black">진짜 심층 보도</span>의 힘</h3>
+                    <div class="space-y-6 mt-8">
+                        <p class="text-slate-600 leading-relaxed">1,500개 매체가 동시에 보도하는 '릴레이 보도'는 여론의 흐름을 바꿉니다. 기업뉴스TV는 소식만 전하는 타 매체와 달리 현장 취재를 통해 기업의 진심을 담아냅니다.</p>
                     </div>
                 </div>
                 
-                <!-- 실제 사례 클릭 연동 -->
                 <div class="lg:w-1/2 w-full space-y-6">
-                    <h4 class="text-center font-bold text-slate-400 uppercase tracking-widest text-[11px] mb-2 font-black text-center">실제 보도 실적 (클릭 시 실행)</h4>
+                    <h4 class="text-center font-bold text-slate-400 uppercase tracking-widest text-[11px] mb-2 font-black">실제 보도 실적 (클릭 시 이동)</h4>
                     
                     <a href="https://kiupnewstv.com/pages/page_22.php?act_type=read&sn=8382" target="_blank" rel="noopener noreferrer" class="block card-hover overflow-hidden rounded-[2.5rem] shadow-2xl border border-slate-100 group">
                         <div class="bg-slate-900 aspect-[21/9] flex items-center p-8 relative">
                             <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-900/40 to-transparent z-10 transition-opacity group-hover:opacity-80"></div>
-                            <div class="relative z-20 w-full flex justify-between items-center text-left text-left">
-                                <div class="text-left text-left">
-                                    <span class="inline-block px-2 py-1 bg-blue-600 text-white text-[10px] font-bold rounded mb-2 uppercase tracking-tighter">Public Sector</span>
+                            <div class="relative z-20 w-full flex justify-between items-center">
+                                <div>
+                                    <span class="inline-block px-2 py-1 bg-blue-600 text-white text-[10px] font-bold rounded mb-2 uppercase">Public Sector</span>
                                     <h5 class="text-white text-lg font-black group-hover:text-blue-300 transition-colors">[공기업] 한국조폐공사 취재 사례</h5>
-                                    <p class="text-blue-100/70 text-xs mt-1 text-left text-left">생생한 현장의 목소리 시청 &rarr;</p>
+                                    <p class="text-blue-100/70 text-xs mt-1">현장의 숨소리까지 담은 보도 시청 &rarr;</p>
                                 </div>
                                 <div class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 group-hover:bg-blue-600 transition shadow-lg">
                                     <svg class="w-7 h-7 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path></svg>
@@ -224,11 +228,11 @@
                     <a href="https://kiupnewstv.com/pages/page_22.php?act_type=read&sn=8375" target="_blank" rel="noopener noreferrer" class="block card-hover overflow-hidden rounded-[2.5rem] shadow-2xl border border-slate-100 group">
                         <div class="bg-slate-900 aspect-[21/9] flex items-center p-8 relative">
                             <div class="absolute inset-0 bg-gradient-to-r from-red-900/90 via-red-900/40 to-transparent z-10 transition-opacity group-hover:opacity-80"></div>
-                            <div class="relative z-20 w-full flex justify-between items-center text-left text-left">
-                                <div class="text-left text-left">
-                                    <span class="inline-block px-2 py-1 bg-red-600 text-white text-[10px] font-bold rounded mb-2 uppercase tracking-tighter">Enterprise Value</span>
+                            <div class="relative z-20 w-full flex justify-between items-center text-left">
+                                <div class="text-left">
+                                    <span class="inline-block px-2 py-1 bg-red-600 text-white text-[10px] font-bold rounded mb-2 uppercase">Enterprise Value</span>
                                     <h5 class="text-white text-lg font-black group-hover:text-red-300 transition-colors">[사기업] 쿠우쿠우 심층 보도</h5>
-                                    <p class="text-red-100/70 text-xs mt-1 text-left text-left">기업 스토리를 담은 보도 시청 &rarr;</p>
+                                    <p class="text-red-100/70 text-xs mt-1">기업 스토리를 담은 보도 시청 &rarr;</p>
                                 </div>
                                 <div class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 group-hover:bg-red-600 transition shadow-lg">
                                     <svg class="w-7 h-7 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path></svg>
@@ -242,23 +246,25 @@
     </section>
 
     <!-- Section 5: 정보 (#info) -->
-    <section id="info" class="py-24 px-4 bg-slate-50 text-left">
+    <section id="info" class="py-24 px-4 bg-slate-50">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 text-left text-left">
-                <div class="bg-white p-12 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-start text-left text-left">
-                    <h3 class="text-2xl font-black text-blue-800 mb-8 italic uppercase tracking-tighter text-left">NEWSRANKEY 정보</h3>
-                    <div class="space-y-5 text-slate-600 w-full text-left">
-                        <p class="flex items-center gap-4 text-left"><span class="font-bold w-24 text-slate-800 text-left">대표이사</span> <span class="text-slate-900 font-semibold text-left">최신영</span></p>
-                        <p class="flex items-center gap-4 text-left"><span class="font-bold w-24 text-slate-800 text-left">연락처</span> <a href="tel:02-2039-8947" class="text-blue-600 font-black hover:underline text-left">02-2039-8947</a></p>
-                        <p class="flex items-start gap-4 text-left"><span class="font-bold w-24 text-slate-800 text-left">소재지</span> <span class="leading-relaxed text-left text-left">서울특별시 영등포구 여의대방로 67길 9 두일빌딩 5층</span></p>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <div class="bg-white p-12 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-start">
+                    <img src="https://newsrankey.com/img/toplogo220419.png" alt="NEWSRANKEY" class="h-10 mb-8 object-contain">
+                    <div class="space-y-5 text-slate-600 w-full">
+                        <p class="flex items-center gap-4"><span class="font-bold w-24 text-slate-800">대표이사</span> <span class="text-slate-900 font-semibold">최신영</span></p>
+                        <p class="flex items-center gap-4"><span class="font-bold w-24 text-slate-800">연락처</span> <a href="tel:02-2039-8947" class="text-blue-600 font-black hover:underline">02-2039-8947</a></p>
+                        <p class="flex items-center gap-4"><span class="font-bold w-24 text-slate-800">홈페이지</span> <a href="https://newsrankey.com" target="_blank" class="text-blue-500 font-bold hover:underline italic text-left">newsrankey.com</a></p>
+                        <p class="flex items-start gap-4 text-left"><span class="font-bold w-24 text-slate-800">소재지</span> <span class="leading-relaxed">서울특별시 영등포구 여의대방로 67길 9 두일빌딩 5층</span></p>
                     </div>
                 </div>
-                <div class="bg-white p-12 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-start text-left text-left">
-                    <h3 class="text-2xl font-black text-red-600 mb-8 italic tracking-tight text-left">기업뉴스TV 정보</h3>
-                    <div class="space-y-5 text-slate-600 w-full text-left text-left">
-                        <p class="flex items-center gap-4 text-left text-left text-left"><span class="font-bold w-24 text-slate-800 text-left">제휴 채널</span> 네이버TV / 유튜브 / 전국 언론사</p>
-                        <p class="flex items-center gap-4 text-left text-left text-left"><span class="font-bold w-24 text-slate-800 text-left">주요 서비스</span> 기업 전문 현장 취재 및 심층 영상 보도</p>
-                        <p class="flex items-center gap-4 text-left text-left text-left"><span class="font-bold w-24 text-slate-800 text-left text-left">취재 문의</span> <a href="tel:02-2039-8947" class="text-red-500 font-black hover:underline text-left text-left">02-2039-8947</a></p>
+                <div class="bg-slate-800 p-12 rounded-[2.5rem] shadow-sm border border-slate-700 flex flex-col items-start text-left">
+                    <img src="https://kiupnewstv.com/img/toplogokiupnewstv.png" alt="기업뉴스TV" class="h-10 mb-8 object-contain">
+                    <div class="space-y-5 text-slate-300 w-full text-left">
+                        <p class="flex items-center gap-4 text-left"><span class="font-bold w-24 text-blue-400">제휴 채널</span> 네이버TV / 유튜브 / 전국 언론사</p>
+                        <p class="flex items-center gap-4 text-left"><span class="font-bold w-24 text-blue-400 text-left">주요 서비스</span> 기업 전문 현장 밀착 취재 및 영상 보도</p>
+                        <p class="flex items-center gap-4 text-left text-left"><span class="font-bold w-24 text-blue-400 text-left">취재 문의</span> <a href="tel:02-2039-8947" class="text-blue-300 font-black hover:underline">02-2039-8947</a></p>
+                        <p class="flex items-center gap-4 text-left"><span class="font-bold w-24 text-blue-400">홈페이지</span> <a href="https://kiupnewstv.com" target="_blank" class="text-blue-300 font-bold hover:underline italic">kiupnewstv.com</a></p>
                     </div>
                 </div>
             </div>
@@ -268,20 +274,22 @@
     <!-- Footer -->
     <footer class="bg-slate-950 py-20 px-4 text-slate-400 border-t border-white/5">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-left">
-            <div class="flex flex-col items-center md:items-start text-center md:text-left text-left">
-                <span class="text-3xl font-black text-white tracking-tighter uppercase mb-6 italic text-left text-left">NEWSRANKEY</span>
-                <p class="max-w-md text-sm text-slate-400 leading-relaxed mb-8 text-left">홍보담당자의 고민을 누구보다 잘 알기에, <br>우리는 결과로 증명하는 파트너가 되겠습니다.</p>
-                <div class="text-xs space-y-1 text-slate-500 text-left text-left text-left text-left">
-                    <p class="text-left text-left text-left text-left">대표이사: 최신영 | 문의: 02-2039-8947</p>
-                    <p class="text-left text-left text-left text-left">주소: 서울특별시 영등포구 여의대방로 67길 9 두일빌딩 5층</p>
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <img src="https://newsrankey.com/img/toplogo220419.png" alt="NEWSRANKEY" class="h-8 mb-6 brightness-0 invert opacity-80">
+                <p class="max-w-md text-sm text-slate-400 leading-relaxed mb-8">
+                    홍보담당자의 고민을 누구보다 잘 알기에, <br>우리는 결과로 증명하는 파트너가 되겠습니다.
+                </p>
+                <div class="text-xs space-y-1 text-slate-500 font-medium">
+                    <p>대표이사: 최신영 | 문의: 02-2039-8947</p>
+                    <p>주소: 서울특별시 영등포구 여의대방로 67길 9 두일빌딩 5층</p>
                 </div>
             </div>
-            <div class="flex flex-col items-center md:items-end text-right text-right text-right">
-                <div class="flex space-x-8 mb-8 font-black text-xs uppercase tracking-widest text-slate-200 text-right">
-                    <a href="https://newsrankey.com" target="_blank" class="hover:text-blue-400 transition text-right">NewsRanky</a>
-                    <a href="https://kiupnewstv.com" target="_blank" class="hover:text-red-400 transition text-right">KiupNewsTV</a>
+            <div class="flex flex-col items-center md:items-end text-right">
+                <div class="flex space-x-8 mb-8 font-black text-xs uppercase tracking-widest text-slate-200">
+                    <a href="https://newsrankey.com" target="_blank" class="hover:text-blue-400 transition">NewsRanky</a>
+                    <a href="https://kiupnewstv.com" target="_blank" class="hover:text-red-400 transition">KiupNewsTV</a>
                 </div>
-                <p class="text-slate-600 text-[10px] uppercase font-bold text-right text-right">&copy; 2024 NEWSRANKEY. ALL RIGHTS RESERVED.</p>
+                <p class="text-slate-600 text-[10px] uppercase font-bold">&copy; 2024 NEWSRANKEY. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
     </footer>
